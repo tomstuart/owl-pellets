@@ -1,0 +1,9 @@
+<h1>Timeline for user <%=params[:user_id]%></h1>
+
+<h2>New tweet</h2>
+<form method="POST" action="/tweet">
+  <label for="body">Post body</label>
+  <input id="body" name="body" type="text"/>
+  <input id="user_id" name="user_id" type="hidden" value="<%=params[:user_id]%>"/>
+  <input type="submit" value="Post"/>
+</form>

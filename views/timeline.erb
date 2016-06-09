@@ -1,5 +1,13 @@
 <h1>Timeline for user <%=params[:user_id]%></h1>
 
+<ul>
+  <% @tweets.each do |tweet| %>
+    <li>
+      <%= tweet['time'] %>: <%= tweet['body'] %>
+    </li>
+  <% end %>
+</ul>
+
 <h2>New tweet</h2>
 <form method="POST" action="/tweet">
   <label for="body">Post body</label>

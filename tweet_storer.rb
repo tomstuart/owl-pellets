@@ -6,7 +6,7 @@ class TweetStorer
 
   def initialize(logfile, redis)
     self.consumer = Consumer.new(logfile) do |event|
-      self.process(event)
+      process(event)
     end
     self.redis = redis
   end
